@@ -30,7 +30,7 @@
 @interface CHCSVParser : NSObject {
 
 	@private
-	id<CHCSVParserDelegate> parserDelegate;
+	id<CHCSVParserDelegate> __unsafe_unretained parserDelegate;
     NSInputStream *csvReadStream;
 	BOOL endOfStreamReached;
 	NSStringEncoding fileEncoding;
@@ -55,7 +55,7 @@
 	NSError *error;
 }
 
-@property (assign) id<CHCSVParserDelegate> parserDelegate;
+@property (unsafe_unretained) id<CHCSVParserDelegate> parserDelegate;
 @property (readonly) NSError * error;
 @property (readonly) NSString * csvFile;
 @property (nonatomic, copy) NSString *delimiter;
