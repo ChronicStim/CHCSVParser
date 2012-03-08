@@ -30,7 +30,7 @@
 @interface NSArrayCHCSVAggregator : NSObject <CHCSVParserDelegate> {
 	NSMutableArray * lines;
 	NSMutableArray * currentLine;
-	NSError * __unsafe_unretained error;
+	NSError * error;
 }
 
 @property (readonly) NSArray * lines;
